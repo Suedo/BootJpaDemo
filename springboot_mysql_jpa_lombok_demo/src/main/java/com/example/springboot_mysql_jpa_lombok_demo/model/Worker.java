@@ -16,16 +16,23 @@ public class Worker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long WORKER_ID;
+    @Column(name = "WORKER_ID")
+    private Long id;
 
-    private String FIRST_NAME;
-    private String LAST_NAME;
-    private Long SALARY;
+    @Column(name = "FIRST_NAME")
+    private String firstName;
+
+    @Column(name = "LAST_NAME")
+    private String lastName;
+
+    @Column(name = "SALARY")
+    private Long salary;
 
     @Column(name = "JOINING_DATE", columnDefinition = "DATETIME")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date JOINING_DATE;
+    private Date joiningDate;
 
-    private String DEPARTMENT;
+    @Column(name = "DEPARTMENT")
+    private String dept;
 
 }
